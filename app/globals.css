@@ -1,27 +1,19 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
 }
-
+/*https://coolors.co/2a7a5d-0c2747-b99354-f4eaac*/
 
 :root {
-  --background: #fffdf9;
-  --foreground: #2d2d2d;
+  --background: #f4eaac;
+  --foreground: #0c2747;
 
-  --primary: #8b5e3c;
-  --secondary: #f5e6d3;
-  --accent: #c97b63;
+  --primary: #2a7a5d;
+  --secondary: #b99354;
 }
 
 body {
@@ -34,9 +26,7 @@ h1, h2, h3 {
   color: var(--primary);
 }
 
-div {
-  margin: 16px auto;
-}
+
 
 button {
   background-color: var(--primary);
@@ -52,3 +42,141 @@ button {
   padding: 16px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+.hero img {
+  width: 300px;
+  object-fit: cover;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: relative;
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.logo img{
+  width: clamp(60px, 5vw, 110px);
+  height: clamp(60px, 5vw, 110px);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.desktopMenu {
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 3vw, 5rem);
+}
+
+.desktopMenu a {
+  text-decoration: none;
+  color: var(--background);
+  font-size: clamp(16px, 1.5vw, 26px);
+}
+
+.hamburger {
+  display: none;
+  position: relative;
+  z-index: 1001;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Три полоски */ 
+.hamburger span {
+  display: block;
+  width: 26px; 
+  height: 3px; 
+  border-radius: 3px; 
+  background-color: var(--background);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.25s ease, width 0.3s ease; 
+}
+
+/* ======== HAMBURGER → X ========= */
+ /* Верхняя полоска */ 
+.hamburger.active span:nth-child(1) { 
+  transform: translateY(9px) rotate(45deg); 
+} 
+/* Средняя полоска исчезает */ 
+.hamburger.active span:nth-child(2) { 
+  opacity: 0; width: 0; 
+}
+/* Нижняя полоска */ 
+.hamburger.active span:nth-child(3) { 
+  transform: translateY(-9px) rotate(-45deg); 
+}
+
+  .mobileMenu {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileMenu {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;   
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--primary);
+    color: var(--background);
+    /* Закрытое состояние */ 
+    transform: translateY(-120%); 
+    opacity: 0; 
+    pointer-events: none; 
+    transition: transform 0.45s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease; 
+    z-index: 1000; }
+
+/* Открытое состояние */ 
+  .mobileMenu.open { 
+    transform: translateY(0); 
+    opacity: 1; 
+    pointer-events: auto; 
+  }
+
+/* Ссылки */ 
+  .mobileMenu a { 
+    text-decoration: none; 
+    color: var(--background); 
+    font-size: 20px; 
+    opacity: 0; 
+    transform: translateY(-10px); 
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+  }
+
+/* Когда меню открыто — ссылки тоже появляются */ 
+  .mobileMenu.open a { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+
+/* Небольшая задержка для каждой ссылки */ 
+  .mobileMenu.open a:nth-child(1) { transition-delay: 0.1s; } 
+  .mobileMenu.open a:nth-child(2) { transition-delay: 0.15s; } 
+  .mobileMenu.open a:nth-child(3) { transition-delay: 0.2s; } 
+  .mobileMenu.open a:nth-child(4) { transition-delay: 0.25s; } 
+}
+  

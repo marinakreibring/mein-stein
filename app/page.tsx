@@ -3,8 +3,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main style={{ padding: "40px" }}>
-      <div>
+      <div className="hero">
       <h1>Mein Stein</h1>
+      <img src="/images/hero.png" alt="Hero Image" width={200} height={200} />
 
       <p>
         Discover unique handmade jewelry and accessories.
