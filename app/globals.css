@@ -48,10 +48,10 @@ button {
   object-fit: cover;
 }
 
-.navbar {
+.navbar, .footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 2rem;
   position: relative;
   background-color: var(--primary);
@@ -63,6 +63,25 @@ button {
   height: clamp(60px, 5vw, 110px);
   object-fit: cover;
   border-radius: 50%;
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 1px;
+  padding: 1rem 0.5rem;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: var(--background);
+}
+
+.social-icons a img{
+  border-radius: 50%;
+  width: clamp(30px, 3vw, 50px);
+  height: clamp(30px, 3vw, 50px);
 }
 
 .desktopMenu {
