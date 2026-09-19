@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t pt-8 text-center">
+    <footer className=" pt-8 text-center">
         <div className="footer">
             <Link href="/" className="logo">
               <img src="/images/logo.webp" alt="Logo" />
