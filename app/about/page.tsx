@@ -7,21 +7,32 @@ export default function AboutPage() {
 
         <section>
             <div>
-                <h2>
+                <h2 className="mt-8">
                     Crafted with Passion. Shared with Love.
                 </h2>
-
-                <p className="mx-8 my-4" >
-                    Mein Stein is a small business creating unique, handmade jewelry and accessories inspired by the natural beauty of stones.
-                    <br />
-                    Every piece is thoughtfully crafted by hand, with care and attention to detail. 
-                    No two natural stones are exactly alike, making each piece as individual as the person who wears it.
-                    <br />
-                    We believe jewelry should be more than just an accessory — 
-                    it should reflect your personality, tell a story, and become something you truly cherish.
-                </p>
-
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mx-auto justify-center mt-4">
+                <div className="mt-4 flex w-full max-w-6xl mx-auto flex-col items-center justify-center gap-10 px-6 sm:flex-row sm:items-start">
+                    <Image 
+                        src="/images/image.webp" 
+                        alt="Handmade" 
+                        width={400} 
+                        height={480} 
+                        className="w-[clamp(220px,30vw,500px)] h-auto rounded-lg shadow-lg"
+                    />
+                    <p className="mx-4">
+                        Mein Stein is a small business creating unique, handmade jewelry
+                        and accessories inspired by the natural beauty of stones.
+                        <br /><br />
+                        Every piece is thoughtfully crafted by hand, with care and
+                        attention to detail.
+                        No two natural stones are exactly alike, making each piece as
+                        individual as the person who wears it.
+                        <br /><br />
+                        We believe jewelry should be more than just an accessory —
+                        it should reflect your personality, tell a story, and become
+                        something you truly cherish.
+                    </p>
+                </div>
+                <div className="mt-12 flex flex-row items-center justify-center gap-4">
                     <button><a href="/shop">Shop Now</a></button>
                     <button><a href="/contact-form">Contact Us</a></button>
                 </div>
@@ -31,7 +42,7 @@ export default function AboutPage() {
 
         <section>
             <div>
-                <h3 className="mt-8">
+                <h3 className="mt-12">
                     Made with Meaning
                 </h3>
 
@@ -39,7 +50,7 @@ export default function AboutPage() {
                     At Mein Stein, we believe that choosing jewelry can be a more personal and 
                     thoughtful experience. That’s why we focus on natural materials, 
                     careful craftsmanship, and a personal touch in everything we create.
-                    <br />
+                    <br /><br />
                     From selecting each stone to preparing your order, we pay attention 
                     to the little details that make a difference.
                 </p>

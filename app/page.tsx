@@ -9,35 +9,52 @@ export default function Home() {
                     <button>Catalogue</button>
                 </div>
             </div> 
-            <h1 className="mt-8">Popular Categories</h1>
-            <div className="flex flex-row justify-around mt-4 text-center">                
+            <h1 className="mt-12">Popular Categories</h1>
+            <div className="flex flex-row justify-around my-12 text-center">                
                 <div>
                     <div className="category">
                         <Image src="/images/bracelets.jpg" alt="Bracelet" fill className="category-card"/>
                     </div>
-                    <h3 mt-2>Bracelets</h3>
+                    <h3 className="mt-2">Bracelets</h3>
                 </div>
                 <div>
                     <div className="category">
                         <Image src="/images/earrings.jpg" alt="Earrings" fill className="category-card" />
                     </div>
-                    <h3 mt-2>Earrings</h3>
+                    <h3 className="mt-2">Earrings</h3>
                 </div>
                 <div>
                     <div className="category">
                         <Image src="/images/rings.jpg" alt="Rings" fill className="category-card"/>
                     </div>
-                    <h3 mt-2>Rings</h3>
+                    <h3 className="mt-2">Rings</h3>
                 </div>
             </div>
 
-            <div>   
-                <h2 className="mt-12">More Than Just Jewelry</h2>
-                <p className="my-4 text-center">
-                    Mein Stein is a platform for sharing one-of-a-kind, handmade creations of natural stones. <br />
-                    We believe in personal service and genuine connections with the people who choose Mein Stein.
+    <section className="relative mt-24 min-h-[500px] overflow-hidden">
+        <img src="/images/stones.webp" alt="background stones"
+            className="absolute inset-0 h-full w-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/20" />
+
+        <div className="relative flex min-h-[500px] items-center justify-center px-6 py-16">
+            <div className="colored max-w-xl p-10 text-center shadow-xl md:p-14">
+                
+                <h2 className="mt-3 italic">
+                    More Than Just Jewelry
+                </h2>
+
+                <p className="mt-6 leading-8 italic">
+                    Mein Stein is a platform for sharing one-of-a-kind,
+                    handmade creations of natural stones.
+                <br /><br />
+                    We believe in personal service and genuine connections
+                    with the people who choose Mein Stein.
                 </p>
             </div>
+        </div>
+    </section>
 
             <a
             className="flex h-12 w-full items-center justify-center mt-4 gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"

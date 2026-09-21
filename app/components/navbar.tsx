@@ -2,8 +2,10 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
@@ -16,10 +18,42 @@ export default function Navbar() {
 
       {/* Desktop navigation */}
       <div className="desktopMenu">
-        <Link href="/about">About Us</Link>
-        <Link href="/shop">Shop</Link>
-        <Link href="/contact">Contact</Link>
-        <Link href="/cart">🛒</Link>
+        <Link
+          href="/about"
+          className={`nav-link ${
+            pathname === "/about" ? "active" : ""
+          }`}
+        >
+          About
+        </Link>
+        <Link
+          href="/shop"
+          className={`nav-link ${
+            pathname === "/shop" ? "active" : ""
+          }`}
+        >
+          Shop
+        </Link>
+        <Link
+          href="/contact"
+          className={`nav-link ${
+            pathname === "/contact" ? "active" : ""
+          }`}
+        >
+          Contact
+        </Link>
+        <Link
+          href="/cart"
+          className={`nav-link ${
+            pathname === "/cart" ? "active" : ""
+          }`}
+        >
+          🛒
+        </Link>
+
+        <button>
+          Sign In
+        </button>
       </div>
 
       {/* Mobile hamburger */}
@@ -51,6 +85,10 @@ export default function Navbar() {
         <Link href="/cart" onClick={closeMenu}>
           Cart
         </Link>
+
+        <button>
+          Sign In
+        </button>
       </div>
     </nav>
   );

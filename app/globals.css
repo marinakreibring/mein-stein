@@ -40,6 +40,19 @@ p {
   line-height: 1.6;
 }
 
+.colored {
+  background: var(--secondary);
+  color: var(--background);
+  opacity: 0.9;  
+  border-radius: 12px;
+}
+.colored h2, .colored h3 {
+  color: var(--background);
+}
+.colored p {
+  color: var(--foreground);
+}
+
 button {
   background-color: var(--secondary);
   color: white;
@@ -96,6 +109,23 @@ button {
   color: var(--background);
 }
 
+.nav-link {
+  transition: 0.2s ease;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.nav-link:hover {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+.nav-link.active {
+  color: var(--background);
+  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+}
+
 .logo img{
   width: clamp(60px, 5vw, 110px);
   height: clamp(60px, 5vw, 110px);
@@ -143,7 +173,7 @@ button {
 .category-card {
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 2px 8px var(--primary);
+  box-shadow: 0 2px 8px var(--foreground);
 }
 
 .hamburger {
