@@ -10,15 +10,17 @@ export default function AboutPage() {
                 <h2 className="mt-8">
                     Crafted with Passion. Shared with Love.
                 </h2>
-                <div className="mt-4 flex w-full max-w-6xl mx-auto flex-col items-center justify-center gap-10 px-6 sm:flex-row sm:items-start">
-                    <Image 
-                        src="/images/image.webp" 
-                        alt="Handmade" 
-                        width={400} 
-                        height={480} 
-                        className="w-[clamp(220px,30vw,500px)] h-auto rounded-lg shadow-lg"
-                    />
-                    <p className="mx-4">
+                <div className="mt-4 flex w-full max-w-6xl mx-auto flex-col items-center justify-center gap-10 px-6 sm:flex-row sm:items-stretch">
+                    <div className="w-[clamp(220px,30vw,700px)]">
+                        <Image
+                            src="/images/image.webp"
+                            alt="Handmade"
+                            width={700}
+                            height={900}
+                            className="h-full w-full rounded-lg object-cover shadow-lg"
+                        />
+                    </div>
+                    <p className="mx-4 flex-1 text-center sm:text-left">
                         Mein Stein is a small business creating unique, handmade jewelry
                         and accessories inspired by the natural beauty of stones.
                         <br /><br />
@@ -46,7 +48,7 @@ export default function AboutPage() {
                     Made with Meaning
                 </h3>
 
-                <p className="mx-8 my-4">
+                <p className="mx-8 my-4 text-center">
                     At Mein Stein, we believe that choosing jewelry can be a more personal and 
                     thoughtful experience. That’s why we focus on natural materials, 
                     careful craftsmanship, and a personal touch in everything we create.

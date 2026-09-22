@@ -51,9 +51,12 @@ export default function Navbar() {
           🛒
         </Link>
 
-        <button>
-          Sign In
-        </button>
+        <Link
+          href="/signin"
+          className={`nav-link ${pathname === "/signin" ? "active" : ""}`}
+        >
+          My Account
+        </Link>
       </div>
 
       {/* Mobile hamburger */}
