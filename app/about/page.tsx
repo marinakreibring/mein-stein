@@ -44,9 +44,9 @@ export default function AboutPage() {
 
         <section>
             <div>
-                <h3 className="mt-12">
+                <h2 className="mt-12">
                     Made with Meaning
-                </h3>
+                </h2>
 
                 <p className="mx-8 my-4 text-center">
                     At Mein Stein, we believe that choosing jewelry can be a more personal and 

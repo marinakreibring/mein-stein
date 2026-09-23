@@ -25,6 +25,7 @@ body {
 h1, h2, h3 {
   color: var(--primary);
   text-align: center;
+  font-family: 'Forte', 'Georgia';
 }
 h1 {
   font-size: clamp(2rem, 5vw, 4rem);
@@ -38,13 +39,14 @@ h3 {
 p {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   line-height: 1.6;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
 }
 
 .colored {
   background: var(--secondary);
   color: var(--background);
   opacity: 0.9;  
-  border-radius: 12px;
+  border-radius: 1.5rem;
 }
 .colored h2, .colored h3 {
   color: var(--background);
@@ -64,9 +66,9 @@ button {
 .card {
   width: 230px;
   background: white;
-  border-radius: 12px;
+  border-radius: 1.5rem;
   padding: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 10px var(--foreground);
 }
 
 .hero {
@@ -174,16 +176,27 @@ footer a:hover {
   position: relative;
   width: clamp(80px, 25vw, 230px);
   height: clamp(100px, 25vw, 250px);
-}
-.category:hover {
-  transform: scale(1.1);
-  transition: transform 0.3s ease;
+  border-radius: 1.5rem;
 }
 
 .category-card {
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 1.5rem;
   box-shadow: 0 5px 10px var(--foreground);
+}
+
+.content-card {
+  background: white;
+  border-radius: 1.5rem;
+
+  overflow: hidden;
+  box-shadow: 0 5px 10px var(--foreground);
+  transition: all .5s ease;
+}
+
+.category:hover, .card:hover, .content-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 30px;
 }
 
 .hamburger {
