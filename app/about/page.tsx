@@ -56,7 +56,7 @@ export default function AboutPage() {
                     From selecting each stone to preparing your order, we pay attention 
                     to the little details that make a difference.
                 </p>
-                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 text-center mt-4 align-items-center justify-items-center">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 text-center mt-4 mb-6 align-items-center justify-items-center">
                     {/* CARD 1 */}
                     <div className="card">
                         <div className="text-5xl mb-4">
@@ -66,7 +66,7 @@ export default function AboutPage() {
                             Natural Stones
                         </h3>
 
-                        <p className="mx-4 my-4">
+                        <p className="mx-2 my-2">
                             Carefully selected natural stones, each with its own unique beauty and character.
                         </p>
                     </div>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                             Handmade Craftsmanship
                         </h3>
 
-                        <p className="mx-4 my-4">
+                        <p className="mx-2 my-2">
                             Made by hand with care, attention to detail, and a passion for timeless design.
                         </p>
                     </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
                             Gift Packaging
                         </h3>
     
-                    <p className="mx-4 my-4">
+                    <p className="mx-2 my-2">
                         Every order is beautifully packaged to make a gift special for your loved ones.
                     </p>
                 </div>
@@ -105,10 +105,10 @@ export default function AboutPage() {
                             Individual Approach
                         </h3>
     
-                    <p className="mx-4 my-4">
-                        Every piece is created with you in mind, with a personal touch and attention to your wishes.
-                    </p>
-                </div>
+                        <p className="mx-2 my-2">
+                            Every piece is created with you in mind, with a personal touch and attention to your wishes.
+                        </p>
+                    </div>
             </div>
         </div>
     </section>

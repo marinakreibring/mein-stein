@@ -40,14 +40,14 @@ export default function ProductCards({
             className={`
                   content-card
                   ${isExpanded
-                    ? "lg:col-span-2 scale-[1.015]"
+                    ? "sm:col-span-2 lg:col-span-3 scale-[1.015]"
                     : ""
                   }
                 `}
               >   
             <div
               className={`
-                grid overflow-hidden
+                grid overflow-hidden items-stretch
                 transition-all duration-700
                 ${
                   isExpanded
@@ -63,7 +63,7 @@ export default function ProductCards({
                   transition-all duration-700
                   ${
                     isExpanded
-                      ? "h-[550px]"
+                      ? "min-h-[550px]"
                       : "h-72"
                   }
                 `}
@@ -92,12 +92,8 @@ export default function ProductCards({
                     {product.title}
                   </h4>
 
-                  <p className="font-bold text-lg mb-2">
+                  <p className="font-bold text-green-800 text-lg mb-2">
                       €{product.price.toFixed(2)}
-                  </p>
-
-                  <p className=" mb-4">
-                    {product.type} | {product.material} | {product.stone}
                   </p>
 
                   <div
@@ -111,6 +107,9 @@ export default function ProductCards({
                     `}
                   >
                     <div className="pt-2">
+                      <p className=" mb-4">
+                          {product.type} | {product.material} | {product.stone}
+                        </p>
                       <div className="mb-6">
                         <p className="font-semibold text-lg mb-2">
                           Product Details
@@ -122,11 +121,11 @@ export default function ProductCards({
                       </div>
 
                       <div className="flex gap-3 flex-wrap">
-                        <button>
+                        <button className="ml-4">
                           Add to Cart
                         </button>
 
-                        <button>
+                        <button className="ml-4">
                           <a
                             href={`/review-form?productId=${product.id}`}
                           >
@@ -173,7 +172,7 @@ export default function ProductCards({
 
                 <button
                   onClick={() => toggleCard(product.id)}
-                  className="w-full mt-4"
+                  className=" mt-4 mx-4"
                 >
                   {isExpanded
                     ? "Close Details"

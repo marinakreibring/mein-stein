@@ -28,7 +28,7 @@ export default async function ShopPage() {
     return (
         <main className="container-custom">
 
-            <section className="section">
+            <section className="section mb-6">
                 <div>
                     <h2 className="mt-4">
                         Handmade Treasures

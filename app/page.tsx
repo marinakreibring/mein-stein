@@ -7,12 +7,14 @@ export default function Home() {
             <div className="hero">
                 <Image className="heroimg" src="/images/hero.png" alt="Hero Image" fill />
                 <div className="hero-content">
-                    <button>Catalogue</button>
+                    <button>
+                        <Link href="/shop">Catalogue</Link>
+                    </button>
                 </div>
             </div> 
             <h1 className="mt-12">Popular Categories</h1>
             <div className="flex flex-row justify-around my-12 text-center">
-                <Link href="/catalog/bracelets" className="group">
+                <Link href="/shop?type=Bracelet">
                     <div className="category">
                         <Image
                             src="/images/bracelets.jpg"
@@ -24,7 +26,7 @@ export default function Home() {
                     <h3 className="mt-2">Bracelets</h3>
                 </Link>
 
-                <Link href="/catalog/earrings" className="group">
+                <Link href="/shop?type=Earrings">
                     <div className="category">
                         <Image
                             src="/images/earrings.jpg"
@@ -36,7 +38,7 @@ export default function Home() {
                     <h3 className="mt-2">Earrings</h3>
                 </Link>
 
-                <Link href="/catalog/rings" className="group">
+                <Link href="/shop?type=Ring">
                     <div className="category">
                         <Image
                             src="/images/rings.jpg"
@@ -73,15 +75,6 @@ export default function Home() {
                         </div>
                     </div>
             </section>
-
-            <a
-            className="flex h-12 w-full items-center justify-center mt-4 gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            >           
-            Deploy Now
-            </a>
 
         </main>
     );

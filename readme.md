@@ -1,11 +1,13 @@
 ## Mein Stein
-Mein Stein is a marketplace for selling my handmade jewelry and accessories.
+Mein Stein (germ.- My Stone) is a marketplace for selling my handmade jewelry and accessories.
 
-Live Demo:
-
+## Live Demo:
+https://mein-stein.vercel.app/
 
 ## Technologies
 - Next.js
+- React
+- TypeScript
 - Node.js
 - MongoDB
 - Tailwind CSS
@@ -14,8 +16,9 @@ Live Demo:
 ## Features
 - Product catalog
 - Product details view
+- Product filtering by category
 - Product reviews and ratings
-- PostgreSQL database integration
+- MongoDB database integration
 - Responsive design
 - Accessibility support
 
