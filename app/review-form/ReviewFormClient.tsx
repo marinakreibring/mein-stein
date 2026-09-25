@@ -25,10 +25,10 @@ export default function ReviewFormClient() {
       </h3>
 
       <p className="section-description">
-        Leave a review for a product you've purchased. <br />Your feedback helps our artisans grow and improve their craft.
+        Leave a review for a product you've purchased. 
       </p>
 
-      <form className="seller-form" action={formAction}>
+      <form className="review-form" action={formAction}>
 
         <input
           type="hidden"

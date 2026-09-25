@@ -13,17 +13,51 @@ export default async function ShopPage() {
         .find({})
         .toArray();
 
-    const productsForClient = products.map((product) => ({
-        id: product._id.toString(),
-        title: product.title,
-        type: product.type,
-        price: product.price,
-        material: product.material,
-        stone: product.stone,
-        description: product.description,
-        imageUrl: product.imageUrl ?? product.imageURL,
-        inStock: product.inStock,
-    }));
+    const reviews = await db
+        .collection("reviews")
+        .find({})
+        .sort({ createdAt: -1 })
+        .toArray();
+
+    const productsForClient = products.map((product) => {
+        const productReviews = reviews.filter(
+            (review) =>
+                review.productId === product._id.toString()
+        );
+
+        const rating =
+            productReviews.length > 0
+                ? productReviews.reduce(
+                    (sum, review) => sum + review.rating,
+                    0
+                ) / productReviews.length
+                : null;
+
+            const latestReview = productReviews[0];
+
+        return {
+            id: product._id.toString(),
+            title: product.title,
+            type: product.type,
+            price: product.price,
+            material: product.material,
+            stone: product.stone,
+            description: product.description,
+            imageUrl: product.imageUrl ?? product.imageURL,
+            inStock: product.inStock,
+
+            rating:
+                rating !== null
+                    ? Number(rating.toFixed(1))
+                    : null,
+
+            latest_review:
+                latestReview?.review ?? null,
+
+            latest_reviewer:
+                latestReview?.name ?? null,
+            };
+    });
 
     return (
         <main className="container-custom">
