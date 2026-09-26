@@ -6,26 +6,30 @@
     --foreground: #ededed;
   }
 }
-/*https://coolors.co/2a7a5d-0c2747-b99354-f4eaac*/
+/*https://coolors.co/a82030-4a222c-b88c4a-b34538-cfb27d*/
 
 :root {
   --background: #f4eaac;
   --foreground: #3E3833;
   --optional: #7A7068;
   --firstaccent: #B98283;
-  --lightaccent: #E5C8C3;
-  --naturalaccent: #A8B09B;
-  --goldenaccent: #B89A65;
+  --lightaccent: #cfb27d;
+  --naturalaccent: #b88c4a;
+ 
   --cards: #FFFDF9;
 
-  --primary: #2a7a5d;
-  --secondary: #b99354;
+  --primary: #a82030;
+  --secondary: #4a222c;
+  --tertiary: #b34538;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.container-custom{
+  height: max-content;
 }
 
 h1, h2, h3 {
@@ -50,8 +54,7 @@ p {
 }
 
 .colored {
-  background: var(--secondary);
-  color: var(--background);
+  background: var(--tertiary);
   opacity: 0.9;  
   border-radius: 1.5rem;
 }
@@ -59,12 +62,12 @@ p {
   color: var(--background);
 }
 .colored p {
-  color: var(--foreground);
+  color: var(--cards);
 }
 
 button {
-  background-color: var(--secondary);
-  color: white;
+  background-color: var(--tertiary);
+  color: var(--cards);
   border-radius: 8px;
   padding: 1rem;
   font-size: clamp(1rem, 2.5vw, 1.5rem);
@@ -76,7 +79,7 @@ button:hover{
 
 .card {
   min-width: 230px;
-  background: white;
+  background: var(--cards);
   border-radius: 1.5rem;
   padding: 1rem;
   margin: 1rem;
@@ -168,6 +171,7 @@ footer a:hover {
 
 .social-icons a img{
   border-radius: 50%;
+  border: 1px solid var(--cards);
   width: clamp(30px, 3vw, 50px);
   height: clamp(30px, 3vw, 50px);
 }
@@ -198,7 +202,7 @@ footer a:hover {
 }
 
 .content-card {
-  background: white;
+  background: var(--cards);
   border-radius: 1.5rem;
 
   overflow: hidden;
@@ -215,7 +219,7 @@ footer a:hover {
   padding: 1rem;
   margin: 1rem;
   text-align: left;
-  background-color: var(--secondary);
+  background-color: var(--naturalaccent);
   color: white;
   border-radius: 1rem;
   box-shadow: 0 5px 10px var(--foreground);
@@ -246,6 +250,9 @@ footer a:hover {
   margin-top: 1rem;
   color: var(--secondary);
   text-align: center;
+}
+.section{
+  margin-top: 2rem;
 }
 .section-title{
   margin-top: 2rem;
