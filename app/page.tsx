@@ -12,6 +12,8 @@ export default function Home() {
                     </button>
                 </div>
             </div> 
+
+           
             <h1 className="mt-12">Popular Categories</h1>
             <div className="flex flex-row justify-around my-12 text-center">
                 <Link href="/shop?type=Bracelet">
@@ -50,7 +52,8 @@ export default function Home() {
                     <h3 className="mt-2">Rings</h3>
                 </Link>
             </div>
-
+           
+            
             <section className="relative mt-24 min-h-[500px] overflow-hidden">
                 <img src="/images/stones.png" alt="background stones"
                     className="absolute inset-0 h-full w-full object-cover"

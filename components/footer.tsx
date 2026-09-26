@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="text-center">
         <div className="footer">
             <Link href="/" className="logo">
-              <img src="/images/logo.webp" alt="Logo" />
+              <img src="/images/logo.jpg" alt="Logo" />
             </Link>
             <Link href="/about">About</Link>
             <Link href="/shop">Shop</Link>

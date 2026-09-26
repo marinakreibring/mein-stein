@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <nav className="navbar">
             <Link href="/" className="logo" onClick={closeMenu}>
-                <img src="/images/logo.webp" alt="Logo" />
+                <img src="/images/logo.jpg" alt="Logo" />
             </Link>
 
             {/* Desktop navigation */}
