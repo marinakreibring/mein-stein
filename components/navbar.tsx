@@ -35,7 +35,7 @@ export default function Navbar() {
                     Shop
                 </Link>
                 <Link
-                    href="/contact"
+                    href="/contact-form"
                     className={`nav-link ${
                     pathname === "/contact" ? "active" : ""
                     }`}
@@ -80,7 +80,7 @@ export default function Navbar() {
                     Shop
                 </Link>
 
-                <Link href="/contact" onClick={closeMenu}>
+                <Link href="/contact-form" onClick={closeMenu}>
                     Contact
                 </Link>
 

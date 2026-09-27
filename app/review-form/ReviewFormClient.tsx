@@ -25,7 +25,7 @@ export default function ReviewFormClient() {
       </h3>
 
       <p className="section-description">
-        Leave a review for a product you've purchased. 
+        You review helps us to improve our services. 
       </p>
 
       <form className="review-form" action={formAction}>

@@ -9,7 +9,7 @@ export default function Footer() {
             </Link>
             <Link href="/about">About</Link>
             <Link href="/shop">Shop</Link>
-            <Link href="/contact">Contact</Link>          
+            <Link href="/contact-form">Contact</Link>          
         </div>
         <div className="social-icons">
           <p >
