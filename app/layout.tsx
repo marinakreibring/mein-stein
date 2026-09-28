@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-
+import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: "Mein Stein",
@@ -17,10 +17,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        {children}
+        
+        <CartProvider>
+          <Navbar />         
+          {children}
+        </CartProvider>
+       
         <Footer />
       </body>
     </html>
   );
 }
+
+

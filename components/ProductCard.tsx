@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { useCart } from "@/context/CartContext";
+
+
 
 type Product = {
   id: string;
@@ -24,6 +27,8 @@ export default function ProductCards({
   products: Product[];
 }) {
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
+
+  const { addToCart } = useCart();
 
   const toggleCard = (id: string) => {
     setExpandedCard(expandedCard === id ? null : id);
@@ -121,8 +126,20 @@ export default function ProductCards({
                       </div>
 
                       <div className="flex gap-3 flex-wrap">
-                        <button className="ml-4">
-                          Add to Cart
+                        <button className="ml-4"
+                          onClick={() => addToCart({
+                          id: product.id,          // Уникальный ID товара
+                          title: product.title,    // Название
+                          price: product.price,    // Цена (число!)
+                          image: product.imageUrl,    // Картинка (опционально)
+                            quantity: 1              // Количество по умолчанию
+                          })}>
+                          <a
+                            href={`/cart`}
+                          >
+                            Add to Cart
+                          </a>
+                          
                         </button>
 
                         <button className="ml-4">
