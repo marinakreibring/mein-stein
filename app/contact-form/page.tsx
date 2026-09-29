@@ -16,12 +16,12 @@ export default function ContactFormPage() {
   return (
     <main>
 
-      <h3 className="section-title">
+      <h2>
         Contact Us
-      </h3>
+      </h2>
 
       <p className="section-description">
-        Do you have questions? We'll be happy to tell you more about our craft.
+        Do you have questions or want to order something special? We'll be happy to help.
       </p>
 
       <form className="review-form" action={formAction}>

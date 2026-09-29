@@ -7,9 +7,9 @@ export default function AboutPage() {
 
         <section>
             <div>
-                <h2 className="mt-8">
+                <h1 className="mt-8">
                     Crafted with Passion. Shared with Love.
-                </h2>
+                </h1>
                 <div className="mt-4 flex w-full max-w-6xl mx-auto flex-col items-center justify-center gap-10 px-6 sm:flex-row sm:items-stretch">
                     <div className="w-[clamp(220px,30vw,700px)]">
                         <Image
@@ -17,7 +17,7 @@ export default function AboutPage() {
                             alt="Handmade"
                             width={700}
                             height={900}
-                            className="h-full w-full rounded-lg object-cover shadow-lg"
+                            className="h-full w-full rounded-lg object-cover shadow-[0_5px_10px_var(--foreground)]"
                         />
                     </div>
                     <p className="mx-4 flex-1 text-center sm:text-left">
@@ -76,7 +76,7 @@ export default function AboutPage() {
                             🤲🏻
                         </div>
                         <h3>
-                            Handmade Craftsmanship
+                            Handmade
                         </h3>
 
                         <p className="mx-2 my-2">

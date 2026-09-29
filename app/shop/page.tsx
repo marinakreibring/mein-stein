@@ -64,9 +64,9 @@ export default async function ShopPage() {
 
             <section className="section mb-6">
                 <div>
-                    <h2 className="mt-4">
+                    <h1 className="mt-4">
                         Handmade Treasures
-                    </h2>
+                    </h1>
 
                     <p className="text-lg text-center max-w-2xl mx-auto mt-4">
                         Explore our collection of handcrafted goods made with care,
