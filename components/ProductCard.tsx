@@ -128,11 +128,11 @@ export default function ProductCards({
                       <div className="flex gap-3 flex-wrap">
                         <button className="ml-4"
                           onClick={() => addToCart({
-                          id: product.id,          // Уникальный ID товара
-                          title: product.title,    // Название
-                          price: product.price,    // Цена (число!)
-                          image: product.imageUrl,    // Картинка (опционально)
-                            quantity: 1              // Количество по умолчанию
+                          id: product.id,          
+                          title: product.title,   
+                          price: product.price,    
+                          image: product.imageUrl,   
+                            quantity: 1            
                           })}>
                           <a
                             href={`/cart`}

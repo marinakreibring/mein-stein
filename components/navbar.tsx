@@ -3,12 +3,20 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    
+    const { items } = useCart();
+    console.log("CART ITEMS:", items);
+    const cartCount = items.reduce(
+        (total, item) => total + item.quantity,
+        0
+    );
 
-    const closeMenu = () => setIsOpen(false);
+     const closeMenu = () => setIsOpen(false);
 
     return (
         <nav className="navbar">
@@ -48,14 +56,7 @@ export default function Navbar() {
                 >
                     My Account
                 </Link> 
-                <Link
-                    href="/cart"
-                    className={`nav-link ${
-                    pathname === "/cart" ? "active" : ""
-                    }`}
-                >
-                    🛒
-                </Link>
+                
             </div>
 
             {/* Mobile hamburger */}
@@ -84,12 +85,23 @@ export default function Navbar() {
                     Contact
                 </Link>
 
-                <Link href="/cart" onClick={closeMenu}>
-                    Cart
-                </Link>
-
                 <Link href="/signin" onClick={closeMenu}>
                     Sign In
+                </Link>
+            </div>
+            <div className="cart">
+                <Link
+                    href="/cart"
+                    className={`nav-link ${
+                    pathname === "/cart" ? "active" : ""
+                    }`}
+                >
+                    🛒
+                    {cartCount > 0 && (
+                        <span className="count">
+                            {cartCount}
+                        </span>
+                    )}
                 </Link>
             </div>
         </nav>

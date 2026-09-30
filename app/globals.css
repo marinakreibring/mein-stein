@@ -126,7 +126,7 @@ button:hover{
   color: var(--background);
 }
 
-.nav-link {
+.nav-link{
   transition: 0.2s ease;
   padding: 4px 8px;
   border-radius: 8px;
@@ -141,6 +141,23 @@ button:hover{
   color: var(--background);
   background-color: rgba(0, 0, 0, 0.1);
   font-weight: bold;
+}
+
+.cart{
+  font-size: 2rem;
+  position: relative;
+}
+.count{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 50%;
+  background-color: var(--firstaccent);
+  opacity: 0.9;
 }
 
 footer a:hover {
