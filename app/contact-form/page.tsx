@@ -40,7 +40,7 @@ export default function ContactFormPage() {
 
         <textarea
           name="message"
-          placeholder="What would you like to know?"
+          placeholder="Write your message here..."
           rows={3}
         />
 

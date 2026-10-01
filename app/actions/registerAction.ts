@@ -2,16 +2,16 @@
 
 import clientPromise from "@/lib/mongodb";
 
-export async function submitContactForm(
+export async function submitRegisterForm(
   prevState: any,
   formData: FormData
 ) {
   const name = formData.get("name") as string;
   const email = formData.get("email") as string;
-  const message = formData.get("message") as string;
+  const password = formData.get("password") as string;
 
   // Basic validation
-  if (!name || !email || !message) {
+  if (!name || !email || !password) {
     return {
       success: false,
       message: "Please fill out all fields.",
@@ -21,20 +21,20 @@ export async function submitContactForm(
   try {
     const client = await clientPromise;
     const db = client.db(); 
-    // Insert the contact form data into a collection 
-    await db.collection("messages").insertOne({
+    // Insert the register form data into a collection 
+    await db.collection("users").insertOne({
       name,
       email,
-      message,
+      password,
       createdAt: new Date(),
     });
 
     return {
       success: true,
-      message: "Thank you! Your message has been received.",
+      message: "Congratulations! You have been registered.",
     };
   } catch (error) {
-    console.error("Failed to submit contact form:", error);
+    console.error("Failed to submit register form:", error);
     return {
       success: false,
       message: "Something went wrong. Please try again later.",

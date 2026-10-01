@@ -17,7 +17,7 @@ export default function CartContent() {
             ? 0
             : totalPrice >= 50
                 ? 0
-                : 5.00;
+                : 6.90;
 
     const finalTotal = totalPrice + shipping;
 
