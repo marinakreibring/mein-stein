@@ -20,7 +20,7 @@ export async function submitRegisterForm(
 
   try {
     const client = await clientPromise;
-    const db = client.db(); 
+    const db = client.db("jewelry_store");
     // Insert the register form data into a collection 
     await db.collection("users").insertOne({
       name,
