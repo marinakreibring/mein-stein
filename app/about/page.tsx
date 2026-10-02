@@ -13,7 +13,7 @@ export default function AboutPage() {
                 <div className="mt-4 flex w-full max-w-6xl mx-auto flex-col items-center justify-center gap-10 px-6 sm:flex-row sm:items-stretch">
                     <div className="w-[clamp(220px,30vw,700px)] sm:self-stretch">
                         <Image
-                            src="/images/image.webp"
+                            src="/images/image.png"
                             alt="Handmade"
                             width={700}
                             height={800}
@@ -23,11 +23,11 @@ export default function AboutPage() {
 
                     <p className="mx-4 flex-1 text-center sm:text-left">
                         Mein Stein is a small business of the Kreibring family. We create unique, handmade jewelry
-                        and accessories inspired by the natural beauty of stones.
+                        and accessories inspired by the natural beauty of gemstones.
                         <br /><br />
                         Every piece is thoughtfully crafted by hand, with care and
                         attention to detail.
-                        No two natural stones are exactly alike, making each piece as
+                        No two natural gemstones are exactly alike, making each piece as
                         individual as the person who wears it.
                         <br /><br />
                         We believe jewelry should be more than just an accessory —
@@ -44,7 +44,7 @@ export default function AboutPage() {
         </section>
 
         <section className="relative mt-24 min-h-[500px] overflow-hidden">
-                <img src="/images/stones.png" alt="background stones"
+                <img src="/images/pendants.png" alt="background pendants"
                     className="absolute inset-0 h-full w-full object-cover"
                 />
 
@@ -80,11 +80,11 @@ export default function AboutPage() {
                             💎
                         </div>
                         <h3>
-                            Natural Stones
+                            Natural Gemstones
                         </h3>
 
                         <p className="mx-2 my-2">
-                            Carefully selected natural stones, each with its own unique beauty and character.
+                            Carefully selected natural gemstones, each with its own unique beauty and character.
                         </p>
                     </div>
                     {/* CARD 2 */}

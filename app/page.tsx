@@ -70,7 +70,7 @@ export default function Home() {
 
                             <p className="mt-6 leading-8 italic">
                                 Mein Stein is a platform for sharing one-of-a-kind,
-                                handmade creations of natural stones.
+                                handmade creations of natural gemstones.
                                 <br /><br />
                                 We believe in personal service and genuine connections
                                 with the people who choose Mein Stein.
