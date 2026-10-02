@@ -18,17 +18,26 @@ export default function ShopContent({
   const [selectedCategory, setSelectedCategory] =
     useState(urlCategory);
 
+  const [search, setSearch] = useState("");
+
   useEffect(() => {
     setSelectedCategory(urlCategory);
   }, [urlCategory]);
 
-  const filteredProducts =
-    selectedCategory === "All"
-      ? products
-      : products.filter(
-          (product) =>
-            product.type === selectedCategory
-        );
+  const filteredProducts = products.filter((product) => {
+    const matchesCategory =
+      selectedCategory === "All" ||
+      product.type === selectedCategory;
+
+    const searchText = search.toLowerCase();
+
+    const matchesSearch =
+      product.title.toLowerCase().includes(searchText) ||
+      product.stone.toLowerCase().includes(searchText) ||
+      product.material.toLowerCase().includes(searchText);
+
+    return matchesCategory && matchesSearch;
+  });
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category);
@@ -42,11 +51,23 @@ export default function ShopContent({
 
   return (
     <>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+
+      <div className="flex justify-center">
+        <input
+          type="text"
+          placeholder=" 🔍 Search..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          className="search-input"
+        />
+      </div>
+
       <CategoryFilter
         selectedCategory={selectedCategory}
         onCategoryChange={handleCategoryChange}
       />
-
+      </div>
       <ProductCards
         products={filteredProducts}
       />

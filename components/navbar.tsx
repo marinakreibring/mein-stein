@@ -96,7 +96,7 @@ export default function Navbar() {
                     pathname === "/cart" ? "active" : ""
                     }`}
                 >
-                    🛒
+                     🛒 
                     {cartCount > 0 && (
                         <span className="count">
                             {cartCount}

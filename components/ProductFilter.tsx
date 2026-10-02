@@ -19,7 +19,7 @@ export default function CategoryFilter({
   ];
 
   return (
-    <div className="mb-8 flex justify-center">
+    <div className="flex justify-center">
       <select className="filter-select"
         value={selectedCategory}
         onChange={(e) => onCategoryChange(e.target.value)}        
