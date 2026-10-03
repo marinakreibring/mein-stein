@@ -1,9 +1,12 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { submitRegisterForm } from "../actions/registerAction";
 
 export default function RegisterFormPage() {
+    const router = useRouter();
 
     const [state, formAction] = useActionState(
         submitRegisterForm,
@@ -12,6 +15,16 @@ export default function RegisterFormPage() {
             message: "",
         }
     );
+
+    useEffect(() => {
+    if (state.success) {
+        const timer = setTimeout(() => {
+            router.push("/");
+        }, 5000);
+
+        return () => clearTimeout(timer);
+    }
+}, [state.success, router]);
 
     return (
         <main>

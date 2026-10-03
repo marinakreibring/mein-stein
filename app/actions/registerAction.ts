@@ -31,7 +31,7 @@ export async function submitRegisterForm(
 
     return {
       success: true,
-      message: "Congratulations! You have been registered.",
+      message: "Congratulations! You have been registered. You will be redirected to the home page shortly.",
     };
   } catch (error) {
     console.error("Failed to submit register form:", error);

@@ -1,10 +1,12 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { submitAccountForm } from "../actions/accountActions";
 
 export default function AccountPage() {
+    const router = useRouter();
 
     const [state, formAction] = useActionState(
         submitAccountForm,
@@ -13,6 +15,16 @@ export default function AccountPage() {
             message: "",
         }
     );
+
+    useEffect(() => {
+        if (state.success) {
+            const timer = setTimeout(() => {
+                router.push("/");
+            }, 4000);
+
+            return () => clearTimeout(timer);
+        }
+    }, [state.success, router]);
 
   return (
     <main>

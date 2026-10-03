@@ -1,6 +1,7 @@
 "use server";
 
-import clientPromise from "../../lib/mongodb";
+import clientPromise from "@/lib/mongodb";
+import { redirect } from "next/navigation";
 
 export async function submitAccountForm(
     prevState: any,
@@ -41,12 +42,17 @@ export async function submitAccountForm(
                 message: "Invalid email or password.",
             };
         }
-
+        
         return {
             success: true,
-            message: "Welcome back!",
+            message: "Welcome back! Redirecting you to the home page shortly...",
+            user: {
+                name: user.name,            
+            },
+            
         };
-
+        
+        
     } catch (error) {
         console.error("Failed to sign in:", error);
 
