@@ -2,6 +2,8 @@
 
 import clientPromise from "@/lib/mongodb";
 import { redirect } from "next/navigation";
+import bcrypt from "bcryptjs";
+import { createSession } from "@/lib/auth";
 
 export async function submitAccountForm(
     prevState: any,
@@ -22,12 +24,10 @@ export async function submitAccountForm(
         const client = await clientPromise;
         const db = client.db("jewelry_store");
 
-        // Find user by email
         const user = await db.collection("users").findOne({
             email: email,
         });
 
-        // User doesn't exist
         if (!user) {
             return {
                 success: false,
@@ -35,21 +35,23 @@ export async function submitAccountForm(
             };
         }
 
-        // Check password
-        if (user.password !== password) {
+        const passwordMatches = await bcrypt.compare(
+            password,
+            user.password
+        );
+
+        if (!passwordMatches) {
             return {
                 success: false,
                 message: "Invalid email or password.",
             };
         }
+
+        await createSession(user._id.toString());
         
         return {
             success: true,
-            message: "Welcome back! Redirecting you to the home page shortly...",
-            user: {
-                name: user.name,            
-            },
-            
+            message: "Welcome back! Redirecting you to the home page shortly...",            
         };
         
         
