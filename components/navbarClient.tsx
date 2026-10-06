@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useCart } from "@/context/CartContext";
+import { logout } from "@/app/actions/logoutActions";
 
 type User = {
     id: string;
@@ -65,13 +66,15 @@ export default function Navbar({ user }: NavbarProps) {
                 </Link>
                 {user ? (
                     <>
-                        <span className="nav-link">
+                        <span className="name">
                             Welcome, {firstName}!
                         </span>
 
-                        <Link href="/logout" className="nav-link">
-                            Logout
-                        </Link>
+                        <form action={logout}>
+                            <button type="submit" className="nav-link">
+                                Logout
+                            </button>
+                        </form>
                     </>
                     ) : (
                         <Link
@@ -114,13 +117,19 @@ export default function Navbar({ user }: NavbarProps) {
 
                 {user ? (
                     <>
-                        <span className="nav-link">
+                        <span className="name">
                             Welcome, {firstName}!
                         </span>
 
-                        <Link href="/logout" onClick={closeMenu}>
-                            Logout
-                        </Link>
+                        <form action={logout}>
+                            <button
+                                type="submit"
+                                className="nav-link"
+                                onClick={closeMenu}
+                            >
+                                Logout
+                            </button>
+                        </form>
                     </>
                     ) : (
                     <Link href="/signin" onClick={closeMenu}>

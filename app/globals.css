@@ -52,6 +52,14 @@ h3 {
   line-height: 1.25;
 }
 
+.create-account-link {
+  text-decoration: none;  
+  transition: 0.2s ease;
+}
+.create-account-link:hover {
+  text-decoration: underline;
+}
+
 p {
   font-size: clamp(1.05rem, 2.5vw, 1.5rem);
   line-height: 1.5;
@@ -131,11 +139,44 @@ button:hover{
   background-color: var(--primary);
   color: var(--background);
 }
+.desktopMenu {
+  display: flex;
+  gap: clamp(0.2rem, 1vw, 3rem);
+  align-items: center;
+  justify-content: center;
+}
 
 .nav-link{
   transition: 0.2s ease;
   padding: 4px 8px;
   border-radius: 8px;
+}
+
+.desktopMenu form {
+  margin: 0;
+  padding: 0;
+}
+
+.desktopMenu form button.nav-link {
+  background: var(--tertiary);
+  color: var(--background);
+  border: none;
+  padding: 4px 8px;
+  margin: 0;
+  font-size: clamp(16px, 1.5vw, 26px);
+  font-family: inherit;
+  border-radius: 8px;
+}
+
+.desktopMenu form button.nav-link:hover {
+  color: var(--foreground);
+  background-color: var(--background);
+  transform: none;
+}
+
+.name {
+  font-weight: bold;
+  font-size: clamp(16px, 1.5vw, 26px);
 }
 
 .mobileMenu a{
@@ -157,6 +198,7 @@ button:hover{
 .cart{
   font-size: 2rem;
   position: relative;
+  flex-shrink: 0;
 }
 .count{
   position: absolute;
@@ -174,6 +216,10 @@ button:hover{
 footer a:hover {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.logo {
+  flex-shrink: 0;
 }
 
 .logo img{
@@ -201,12 +247,6 @@ footer a:hover {
   border: 1px solid var(--cards);
   width: clamp(30px, 3vw, 50px);
   height: clamp(30px, 3vw, 50px);
-}
-
-.desktopMenu {
-  display: flex;
-  align-items: center;
-  gap: clamp(2rem, 3vw, 5rem);
 }
 
 .desktopMenu a {
