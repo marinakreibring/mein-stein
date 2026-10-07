@@ -153,7 +153,9 @@ export default function CartContent() {
                         disabled={items.length === 0}
                         className="disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        Proceed to Checkout
+                        <Link href="/checkout">
+                            Proceed to Checkout
+                        </Link>
                     </button>
 
                     <button>

@@ -213,6 +213,11 @@ button:hover{
   opacity: 0.9;
 }
 
+.oder-summary-container{
+  width: clamp(250px, 50%, 500px);
+  margin: 1rem auto;
+}
+
 footer a:hover {
   font-weight: bold;
   text-decoration: underline;
