@@ -12,7 +12,6 @@ export default function Home() {
                     </button>
                 </div>
             </div> 
-
            
             <h1 className="mt-12">Popular Categories</h1>
             <div className="flex flex-row justify-around my-12 text-center">
@@ -51,8 +50,7 @@ export default function Home() {
                     </div>
                     <h3 className="mt-2">Rings</h3>
                 </Link>
-            </div>
-           
+            </div>           
             
             <section className="relative mt-24 min-h-[500px] overflow-hidden">
                 <img src="/images/stones.png" alt="background stones"

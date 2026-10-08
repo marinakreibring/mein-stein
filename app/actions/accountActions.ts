@@ -1,7 +1,6 @@
 "use server";
 
 import clientPromise from "@/lib/mongodb";
-import { redirect } from "next/navigation";
 import bcrypt from "bcryptjs";
 import { createSession } from "@/lib/auth";
 

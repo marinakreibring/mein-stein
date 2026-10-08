@@ -29,5 +29,25 @@ https://mein-stein.vercel.app/
 - Responsive design
 - Accessibility support
 
+## Database
+
+The application uses MongoDB Atlas for storing:
+
+- jewelry products
+- users
+- reviews
+- contact form submissions
+
+## Project Structure
+
+- `app/` – pages and server actions
+- `components/` – reusable UI components
+- `context/` – shopping cart state
+- `lib/` – database and authentication utilities
+
+## Deployment
+
+The application is deployed using Vercel.
+
 ## Author
 Marina Kreibring

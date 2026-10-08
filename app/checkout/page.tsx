@@ -1,13 +1,8 @@
 "use client";
 
-import { useActionState } from "react";
-
 import OrderSummary from "@/components/OrderSummury";
 
-
 export default function CheckoutPage() {
-
-    
 
     return (
         <main>

@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useCart } from "@/context/CartContext";
 import { logout } from "@/app/actions/logoutActions";
 
+
 type User = {
     id: string;
     name: string;
@@ -23,7 +24,8 @@ export default function Navbar({ user }: NavbarProps) {
 
     const [isOpen, setIsOpen] = useState(false);
     
-    const { items } = useCart();
+    const { items, clearCart } = useCart();
+    
     console.log("CART ITEMS:", items);
     const cartCount = items.reduce(
         (total, item) => total + item.quantity,
@@ -70,7 +72,11 @@ export default function Navbar({ user }: NavbarProps) {
                             Welcome, {firstName}!
                         </span>
 
-                        <form action={logout}>
+                        <form action={logout}
+                            onSubmit={() => {
+                                clearCart();
+                            }}
+                        >
                             <button type="submit" className="nav-link">
                                 Logout
                             </button>
@@ -121,7 +127,12 @@ export default function Navbar({ user }: NavbarProps) {
                             Welcome, {firstName}!
                         </span>
 
-                        <form action={logout}>
+                        <form
+                            action={logout}
+                            onSubmit={() => {
+                            clearCart();
+                            }}
+                        >
                             <button
                                 type="submit"
                                 className="nav-link"

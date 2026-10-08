@@ -21,7 +21,7 @@ export default function CartContent() {
 
     const finalTotal = totalPrice + shipping;
 
-    // Пока корзина инициализируется из localStorage
+    // waiting for localStorage
     if (!isInitialized) {
         return (
             <div className="text-center mt-12 text-gray-500">
