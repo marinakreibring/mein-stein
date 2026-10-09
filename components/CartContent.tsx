@@ -150,12 +150,16 @@ export default function CartContent() {
                 <div className="flex flex-wrap gap-4 mt-8 justify-center">
 
                     <button
+                        type="button"
                         disabled={items.length === 0}
+                        onClick={() => {
+                            if (items.length > 0) {
+                                window.location.href = "/checkout";
+                            }
+                        }}
                         className="disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        <Link href="/checkout">
-                            Proceed to Checkout
-                        </Link>
+                        Proceed to Checkout
                     </button>
 
                     <button>
