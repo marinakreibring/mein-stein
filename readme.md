@@ -1,5 +1,5 @@
 ## Mein Stein
-Mein Stein ("My Stone" in German) is a marketplace for selling my handmade jewelry and accessories.
+Mein Stein ([maɪn ʃtaɪn] - "My Stone" in German) is a marketplace for selling my handmade jewelry and accessories.
 
 ## Live Demo:
 https://mein-stein.vercel.app/
@@ -27,7 +27,6 @@ https://mein-stein.vercel.app/
 - Contact form
 - MongoDB database integration
 - Responsive design
-- Accessibility support
 
 ## Database
 
